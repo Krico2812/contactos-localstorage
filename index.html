@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Contactos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1> Lista de Contactos</h1>
+
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Nombre" required>
+      <input type="email" id="email" placeholder="Correo" required>
+      <input type="tel" id="phone" placeholder="Teléfono" required>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Buscar contacto...">
+
+    <ul id="contact-list"></ul>
+
+    <p id="empty" class="muted">No hay contactos. Agrega el primero </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
