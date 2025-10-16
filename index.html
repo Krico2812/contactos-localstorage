@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Contactos</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📇 Lista de Contactos</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="container">
-    <h1> Lista de Contactos</h1>
+    <h1>📇 Lista de Contactos</h1>
 
+    <!-- Formulario de agregar -->
     <form id="contact-form">
-      <input type="text" id="name" placeholder="Nombre" required>
-      <input type="email" id="email" placeholder="Correo" required>
-      <input type="tel" id="phone" placeholder="Teléfono" required>
+      <input type="text" id="name" placeholder="Nombre" required />
+      <input type="email" id="email" placeholder="Correo" required />
+      <input type="tel" id="phone" placeholder="Teléfono" required />
       <button type="submit">Agregar</button>
     </form>
 
-    <input type="text" id="search" placeholder="Buscar contacto...">
+    <input type="text" id="search" placeholder="🔍 Buscar contacto..." />
 
-    <ul id="contact-list"></ul>
+    <!-- Tabla de contactos -->
+    <table id="contact-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="contact-list"></tbody>
+    </table>
 
-    <p id="empty" class="muted">No hay contactos. Agrega el primero </p>
+    <p id="empty" class="muted">No hay contactos. Agrega el primero 👇</p>
   </main>
+
+  <!-- Modal de edición -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <h2>Editar contacto</h2>
+      <form id="edit-form">
+        <input type="text" id="edit-name" placeholder="Nombre" required />
+        <input type="email" id="edit-email" placeholder="Correo" required />
+        <input type="tel" id="edit-phone" placeholder="Teléfono" required />
+        <div class="modal-buttons">
+          <button type="submit" class="save">Guardar</button>
+          <button type="button" id="cancel-edit" class="cancel">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
